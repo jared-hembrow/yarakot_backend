@@ -1,13 +1,12 @@
 from flask import Flask
-from dotenv import load_dotenv
+
 from os import getenv
 from flask_sqlalchemy import SQLAlchemy
 
 # create flask App
 app = Flask(__name__)
 
-# env config
-load_dotenv()
+
 
 
 # DB config - postgreSQL
