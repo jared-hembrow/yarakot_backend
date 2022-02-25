@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 
 # DB config - postgreSQL
-app.config['SQLALCHEMY_DATABASE_URI'] = getenv("DB_URI")
+app.config['SQLALCHEMY_DATABASE_URI'] = getenv("DATABASE_URL")
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 app.secret_key = getenv("SECRET_STRING")
 db = SQLAlchemy(app)
