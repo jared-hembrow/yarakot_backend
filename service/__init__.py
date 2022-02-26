@@ -23,6 +23,11 @@ def after_request(response):
     response.headers.add('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS')
     return response
 
+@app.route("/", methods=["GET"])
+def home():
+    return "Home Page"
+
+
 from service.routes import get_routes
 from service.routes import create_tables
 from service.routes import login_route
