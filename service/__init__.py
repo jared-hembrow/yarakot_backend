@@ -13,7 +13,7 @@ app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = getenv("DB_URI")
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 app.secret_key = getenv("SECRET_STRING")
-cors = CORS(app, resources={r"/*": {"origins": "*"}})
+cors = CORS(app)
 db = SQLAlchemy(app)
 
 from service.routes import get_routes
