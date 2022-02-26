@@ -1,6 +1,7 @@
 from flask import Flask, Response, request
 from service import app,db
 from service.models.org_models import *
+from sqlalchemy import exc
 
 # creates all tables in the service/models folders in the DB connected to DB (var)
 @app.route('/create-all', methods=['GET'])
